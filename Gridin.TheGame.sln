@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30104.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gridin.TheGame", "Gridin.TheGame\Gridin.TheGame.csproj", "{BFC36D32-43E3-4C8D-9B7E-740709EAAA57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Players", "Player\Players.csproj", "{E7516632-DEC0-4AA2-A0D1-7EEF0CBF6B42}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BFC36D32-43E3-4C8D-9B7E-740709EAAA57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFC36D32-43E3-4C8D-9B7E-740709EAAA57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFC36D32-43E3-4C8D-9B7E-740709EAAA57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFC36D32-43E3-4C8D-9B7E-740709EAAA57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7516632-DEC0-4AA2-A0D1-7EEF0CBF6B42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7516632-DEC0-4AA2-A0D1-7EEF0CBF6B42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7516632-DEC0-4AA2-A0D1-7EEF0CBF6B42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7516632-DEC0-4AA2-A0D1-7EEF0CBF6B42}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C140BD2D-D22B-4244-A70D-F7ED440E9E46}
+	EndGlobalSection
+EndGlobal
