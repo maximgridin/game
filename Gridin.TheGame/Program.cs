@@ -1,7 +1,7 @@
-﻿using Gridin.TheGame.Constants;
-using Gridin.TheGame.Helpers;
+﻿using Players.Enums;
+using Players.Models;
 using System;
-using System.Linq;
+using System.Collections.Generic;
 
 namespace Gridin.TheGame
 {
@@ -11,34 +11,47 @@ namespace Gridin.TheGame
         public static void Main()
         {
             var playerCount = ResolvePlayerCount();
-            
-            Console.ReadLine();
+            var players = ResolvePlayers(playerCount);
 
-            //var randomPlayer = new Player(PlayerStrategies.WithRandomStrategy, "John");
-            //var memoryPlayer = new Player(PlayerStrategies.WithMemoryStrategy, "Jimmy");
-            //var thoroughPlayer = new Player(PlayerStrategies.WithThoroughStrategy, "Jane");
-            //var cheaterPlayer = new Player(PlayerStrategies.WithCheaterPlayerStrategy, "James");
-            //var thoroughCheaterPlayer = new Player(PlayerStrategies.WithThoroughCheaterStrategy, "Jason");
+            Console.ReadLine();
         }
 
         private static int ResolvePlayerCount()
         {
             Console.WriteLine("Please set the amount of participating players minimum 2, maximum 8");
+            var consoleKey = Console.ReadLine();
+            int.TryParse(consoleKey, out var result);
 
-            while (true)
+            return result;
+        }
+
+        private static IEnumerable<Player> ResolvePlayers(int count)
+        {
+            var players = new List<Player>();
+
+            var player = 1;
+            Console.WriteLine();
+            Console.WriteLine("Random Type: 1");
+            Console.WriteLine("Memory Type: 2");
+            Console.WriteLine("Thorough Type: 3");
+            Console.WriteLine("Cheater Type: 4");
+            Console.WriteLine("ThoroughCheater Type: 5");
+            Console.WriteLine();
+            for (var i = 0; i < count; i++)
             {
-                var consoleKey = Console.ReadKey().Key;
+                Console.WriteLine($"Enter the name of {player} player ");
+                var playerName = Console.ReadLine();
 
-                if (GameConstants.AllowedKeys.Contains(consoleKey))
-                {
-                    Console.WriteLine();
-                    return  (int) consoleKey;
-                }
-                else
-                {
-                    ConsoleHelper.ClearCurrentConsoleLine();
-                }
+                Console.WriteLine("Enter player type ");
+                var consoleKey = Console.ReadLine();
+
+                int.TryParse(consoleKey, out var playerType);
+                
+                players.Add(new Player((PlayerType)playerType, playerName));
+                ++player;
             }
+
+            return players;
         }
     }
 }

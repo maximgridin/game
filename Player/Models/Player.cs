@@ -1,16 +1,16 @@
-﻿using Players.Strategies.Contracts;
+﻿using Players.Enums;
 
 namespace Players.Models
 {
     public class Player
     {
-        public Player(IPlayerStrategy gameStrategy, string name)
+        public Player(PlayerType playerType, string name)
         {
-            this.gameStrategy = gameStrategy;
+            this.playerType = playerType;
             Name = name;
         }
 
-        private IPlayerStrategy gameStrategy;
+        private PlayerType playerType;
         public string Name;
         public int AttemptCount = 0;
     }

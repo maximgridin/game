@@ -43,7 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Constants\GameConstants.cs" />
     <Compile Include="FruitBasket.cs" />
     <Compile Include="GameBoard.cs" />
     <Compile Include="Helpers\ConsoleHelper.cs" />
