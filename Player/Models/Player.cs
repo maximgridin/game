@@ -1,4 +1,5 @@
 ﻿using Players.Enums;
+using Players.Strategies.Contracts;
 
 namespace Players.Models
 {
@@ -12,6 +13,8 @@ namespace Players.Models
 
         private PlayerType playerType;
         public string Name;
-        public int AttemptCount = 0;
+        public int CountOfAttempts = default;
+        public IPlayerStrategy PlayerStrategy;
+        public bool CanMakeTurn { get; set; }
     }
 }

@@ -12,6 +12,8 @@ namespace Gridin.TheGame
         {
             var playerCount = ResolvePlayerCount();
             var players = ResolvePlayers(playerCount);
+            var game = new Game(players);
+            game.Start();
 
             Console.ReadLine();
         }
