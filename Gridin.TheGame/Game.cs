@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Players.Models;
+using Shared.Models;
 
 namespace Gridin.TheGame
 {

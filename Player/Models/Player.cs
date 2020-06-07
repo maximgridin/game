@@ -1,28 +1,27 @@
 ﻿using Players.Enums;
+using Players.PlayerStrategies.Contracts;
+using Players.PlayerStrategies.Resolvers;
 using Players.Strategies;
-using Players.Strategies.Contracts;
 
 namespace Players.Models
 {
     public class Player
     {
-        
         public Player(PlayerType playerType, string name)
         {
-            this.playerType = playerType;
-            Name = name;
-            PlayerStrategy = PlayerStrategyResolver.playerStrategyResolver[playerType];
+            this.name = name;
+            this.strategy = new PlayerStrategyResolver().Resolve(playerType);
         }
 
-        private PlayerType playerType;
-        public string Name;
-        public int CountOfAttempts = default;
-        public IPlayerStrategy PlayerStrategy;
+        private readonly IPlayerStrategy strategy;
+        private readonly string name;
+
+        public int CountOfAttempts { get; set; }
         public bool CanMakeTurn { get; set; }
 
         public void MakeTurn()
         {
-            PlayerStrategy.GetGuess();
+            strategy.GetGuess();
         }
     }
 }

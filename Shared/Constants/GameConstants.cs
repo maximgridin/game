@@ -1,4 +1,4 @@
-﻿namespace Gridin.TheGame.Constants
+﻿namespace Shared.Constants
 {
     public class GameConstants
     {

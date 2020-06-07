@@ -1,9 +1,9 @@
-﻿using Gridin.TheGame.Constants;
-using Players.Strategies.Contracts;
+﻿using System.Linq;
+using Players.PlayerStrategies.Contracts;
+using Shared.Constants;
 using Shared.Helpers;
-using System.Linq;
 
-namespace Players.Strategies.Implementations
+namespace Players.PlayerStrategies.Implementations
 {
     public class CheaterPlayerStrategy : IPlayerStrategy
     {

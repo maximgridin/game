@@ -1,6 +1,6 @@
 ﻿using Shared.Helpers;
 
-namespace Gridin.TheGame
+namespace Shared.Models
 {
     public class FruitBasket
     {

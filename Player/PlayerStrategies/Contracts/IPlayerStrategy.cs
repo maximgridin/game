@@ -1,4 +1,4 @@
-﻿namespace Players.Strategies.Contracts
+﻿namespace Players.PlayerStrategies.Contracts
 {
     public interface IPlayerStrategy
     {

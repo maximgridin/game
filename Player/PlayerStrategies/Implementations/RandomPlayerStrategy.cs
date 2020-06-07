@@ -1,7 +1,7 @@
-﻿using Players.Strategies.Contracts;
+﻿using Players.PlayerStrategies.Contracts;
 using Shared.Helpers;
 
-namespace Players.Strategies.Implementations
+namespace Players.PlayerStrategies.Implementations
 {
     public class RandomPlayerStrategy : IPlayerStrategy
     {

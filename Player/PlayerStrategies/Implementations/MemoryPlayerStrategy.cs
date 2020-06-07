@@ -1,10 +1,10 @@
-﻿using Gridin.TheGame.Constants;
-using Players.Strategies.Contracts;
-using Shared.Helpers;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
+using Players.PlayerStrategies.Contracts;
+using Shared.Constants;
+using Shared.Helpers;
 
-namespace Players.Strategies.Implementations
+namespace Players.PlayerStrategies.Implementations
 {
     public class MemoryPlayerStrategy : IPlayerStrategy
     {

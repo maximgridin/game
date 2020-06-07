@@ -44,7 +44,9 @@
     <Compile Include="Constants\GameConstants.cs" />
     <Compile Include="Helpers\GameBoard.cs" />
     <Compile Include="Helpers\GameHelper.cs" />
+    <Compile Include="Models\FruitBasket.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
