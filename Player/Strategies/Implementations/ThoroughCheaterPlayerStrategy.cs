@@ -1,12 +1,22 @@
-﻿using Players.Strategies.Contracts;
+﻿using Gridin.TheGame.Constants;
+using Players.Strategies.Contracts;
+using Shared.Helpers;
 
 namespace Players.Strategies.Implementations
 {
     public class ThoroughCheaterPlayerStrategy : IPlayerStrategy
     {
-        public int MakeTurn()
+        private static int CurrentGuess = GameConstants.LowerLimit;
+
+        public int GetGuess()
         {
-            throw new System.NotImplementedException();
+            while (!GameBoard.UsedGuesses.Contains(CurrentGuess))
+            {
+                CurrentGuess++;
+                GameBoard.UsedGuesses.Add(CurrentGuess);
+            }
+
+            return CurrentGuess;
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using System;
+﻿using Shared.Helpers;
 
 namespace Gridin.TheGame
 {
@@ -7,7 +7,7 @@ namespace Gridin.TheGame
         private static FruitBasket fruitBasket;
 
         private FruitBasket() =>
-            Weight = new Random().Next(40, 140);
+            Weight = GameHelper.GetRandom();
 
         public static FruitBasket GetFruitBasket() =>
             fruitBasket ?? new FruitBasket();

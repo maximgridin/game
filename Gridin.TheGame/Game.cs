@@ -23,12 +23,12 @@ namespace Gridin.TheGame
                 {
                     if (player.CanMakeTurn)
                     {
-                        var guess = player.PlayerStrategy.MakeTurn();
-                        GameBoard.UsedNumbers.Add(guess);
-                        if (guess == fruitBasket.Weight)
-                        {
+                        //var guess = player.MakeTurn();
+                        
+                        //if (guess == fruitBasket.Weight)
+                        //{
                                 
-                        }
+                        //}
                     }
                     
                     

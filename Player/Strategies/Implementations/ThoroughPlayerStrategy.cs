@@ -1,12 +1,20 @@
-﻿using Players.Strategies.Contracts;
+﻿using Gridin.TheGame.Constants;
+using Players.Strategies.Contracts;
+using Shared.Helpers;
 
 namespace Players.Strategies.Implementations
 {
     public class ThoroughPlayerStrategy : IPlayerStrategy
     {
-        public int MakeTurn()
+        private static int currentGuess = GameConstants.LowerLimit;
+
+        public int GetGuess()
         {
-            throw new System.NotImplementedException();
+            var guess = currentGuess++;
+
+            GameBoard.UsedGuesses.Add(guess);
+
+            return guess;
         }
     }
 }

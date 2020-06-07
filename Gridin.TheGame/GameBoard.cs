@@ -2,7 +2,7 @@
 
 namespace Gridin.TheGame
 {
-    public class GameBoard
+    public static class GameBoard
     {
         public static HashSet<int> UsedNumbers = new HashSet<int>();
     }

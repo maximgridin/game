@@ -2,6 +2,6 @@
 {
     public interface IPlayerStrategy
     {
-        int MakeTurn();
+        int GetGuess();
     }
 }
