@@ -1,33 +1,50 @@
-﻿using Gridin.TheGame.Players.Models;
+﻿using System;
+using Gridin.TheGame.Players.Models;
 using System.Collections.Generic;
+using System.Linq;
+using Gridin.TheGame.Shared.Models;
 
 namespace Gridin.TheGame.Shared.Helpers
 {
     public static class GameBoard
     {
-        private static Dictionary<int, List<Player>> usedGuesses = new Dictionary<int, List<Player>>();
+        private static readonly Dictionary<int, List<Player>> UsedGuesses = 
+            new Dictionary<int, List<Player>>();
 
         public static void AddPlayer(int guess, Player player)
         {
-            if (usedGuesses.ContainsKey(guess))
+            if (UsedGuesses.ContainsKey(guess))
             {
-                var playerList = usedGuesses[guess];
-                usedGuesses.Remove(guess);
+                var playerList = UsedGuesses[guess];
+                UsedGuesses.Remove(guess);
                 playerList.Add(player);
-                usedGuesses.Add(guess, playerList);
+                UsedGuesses.Add(guess, playerList);
             }
             else
             {
-                usedGuesses.Add(guess, new List<Player> { player });
+                UsedGuesses.Add(guess, new List<Player> { player });
             }
         }
 
-        public static int UsedGuesses()
-        {
-            return usedGuesses.Count;
-        }
+        public static int CountOfGuesses() => 
+            UsedGuesses.Count;
 
         public static bool Contains(int guess) => 
-            usedGuesses.ContainsKey(guess);
+            UsedGuesses.ContainsKey(guess);
+
+        public static ClosestResultModel GetTiedResult()
+        {
+            var keys = UsedGuesses.Keys.ToList();
+
+            var closestGuess = keys.OrderBy(v => Math.Abs((long)v - FruitBasket.Weight)).First();
+
+            var players = UsedGuesses[closestGuess];
+
+            return new ClosestResultModel
+            {
+                Guess = closestGuess,
+                Players = players
+            };
+        }
     }
 }

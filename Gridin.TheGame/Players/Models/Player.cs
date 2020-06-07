@@ -1,6 +1,6 @@
 ﻿using Gridin.TheGame.Players.Enums;
 using Gridin.TheGame.Players.PlayerStrategies.Contracts;
-using Gridin.TheGame.Players.PlayerStrategies.Resolvers;
+using Gridin.TheGame.Players.Resolvers;
 
 namespace Gridin.TheGame.Players.Models
 {

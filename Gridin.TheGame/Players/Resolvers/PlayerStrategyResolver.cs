@@ -3,7 +3,7 @@ using Gridin.TheGame.Players.Enums;
 using Gridin.TheGame.Players.PlayerStrategies.Contracts;
 using Gridin.TheGame.Players.PlayerStrategies.Implementations;
 
-namespace Gridin.TheGame.Players.PlayerStrategies.Resolvers
+namespace Gridin.TheGame.Players.Resolvers
 {
     public class PlayerStrategyResolver
     {

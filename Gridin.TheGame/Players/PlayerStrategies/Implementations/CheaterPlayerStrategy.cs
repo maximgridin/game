@@ -12,7 +12,7 @@ namespace Gridin.TheGame.Players.PlayerStrategies.Implementations
         {
             var range = Enumerable.Range(GameConstants.LowerLimit, GameConstants.UpperLimit).Where(i => !GameBoard.Contains(i));
 
-            var index = new System.Random().Next(GameConstants.LowerLimit, GameConstants.UpperLimit + 1 - GameBoard.UsedGuesses());
+            var index = new System.Random().Next(GameConstants.LowerLimit, GameConstants.UpperLimit + 1 - GameBoard.CountOfGuesses());
 
             var guess = range.ElementAt(index);
             GameBoard.AddPlayer(guess, player);

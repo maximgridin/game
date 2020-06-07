@@ -23,7 +23,7 @@ namespace Gridin.TheGame.Game
             {
                 if (!players.Any())
                 {
-                    Program.Tie();
+                    GameParts.Tie();
                 }
                 for (var index = 0; index < players.Count; index++)
                 {
@@ -44,7 +44,7 @@ namespace Gridin.TheGame.Game
 
                         if (guess == FruitBasket.Weight)
                         {
-                            Program.Win(player);
+                            GameParts.Win(player);
                         }
                         else
                         {

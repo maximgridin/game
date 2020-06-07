@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Shared\Helpers\GameParts.cs" />
     <Compile Include="Game\Game.cs" />
     <Compile Include="Players\Enums\PlayerType.cs" />
     <Compile Include="Players\Models\Player.cs" />
@@ -52,12 +53,13 @@
     <Compile Include="Players\PlayerStrategies\Implementations\RandomPlayerStrategy.cs" />
     <Compile Include="Players\PlayerStrategies\Implementations\ThoroughCheaterPlayerStrategy.cs" />
     <Compile Include="Players\PlayerStrategies\Implementations\ThoroughPlayerStrategy.cs" />
-    <Compile Include="Players\PlayerStrategies\Resolvers\PlayerStrategyResolver.cs" />
+    <Compile Include="Players\Resolvers\PlayerStrategyResolver.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Shared\Constants\GameConstants.cs" />
     <Compile Include="Shared\Helpers\GameBoard.cs" />
     <Compile Include="Shared\Helpers\GameHelper.cs" />
+    <Compile Include="Shared\Models\ClosestResultModel.cs" />
     <Compile Include="Shared\Models\FruitBasket.cs" />
   </ItemGroup>
   <ItemGroup>
