@@ -9,15 +9,26 @@ namespace Players.Models
     {
         public Player(PlayerType playerType, string name)
         {
-            this.name = name;
+            this.Name = name;
             this.strategy = new PlayerStrategyResolver().Resolve(playerType);
         }
 
         private readonly IPlayerStrategy strategy;
-        private readonly string name;
+        public string Name { get; set; }
 
         public int CountOfAttempts { get; set; }
-        public bool CanMakeTurn { get; set; }
+
+        public bool CanMakeTurn
+        {
+            get
+            {
+                return 
+            }
+            set
+            {
+
+            }
+        }
 
         public void MakeTurn()
         {

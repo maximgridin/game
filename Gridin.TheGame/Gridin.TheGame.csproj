@@ -43,23 +43,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Game.cs" />
-    <Compile Include="GameBoard.cs" />
+    <Compile Include="Game\Game.cs" />
+    <Compile Include="Players\Enums\PlayerType.cs" />
+    <Compile Include="Players\Models\Player.cs" />
+    <Compile Include="Players\PlayerStrategies\Contracts\IPlayerStrategy.cs" />
+    <Compile Include="Players\PlayerStrategies\Implementations\CheaterPlayerStrategy.cs" />
+    <Compile Include="Players\PlayerStrategies\Implementations\MemoryPlayerStrategy.cs" />
+    <Compile Include="Players\PlayerStrategies\Implementations\RandomPlayerStrategy.cs" />
+    <Compile Include="Players\PlayerStrategies\Implementations\ThoroughCheaterPlayerStrategy.cs" />
+    <Compile Include="Players\PlayerStrategies\Implementations\ThoroughPlayerStrategy.cs" />
+    <Compile Include="Players\PlayerStrategies\Resolvers\PlayerStrategyResolver.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shared\Constants\GameConstants.cs" />
+    <Compile Include="Shared\Helpers\GameBoard.cs" />
+    <Compile Include="Shared\Helpers\GameHelper.cs" />
+    <Compile Include="Shared\Models\FruitBasket.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Player\Players.csproj">
-      <Project>{e7516632-dec0-4aa2-a0d1-7eef0cbf6b42}</Project>
-      <Name>Players</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Shared\Shared.csproj">
-      <Project>{5d65d0e4-8ac9-4a40-9b8f-abdba4ef3d85}</Project>
-      <Name>Shared</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
